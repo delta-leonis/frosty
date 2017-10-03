@@ -7,15 +7,13 @@ import com.copilot.yagl4j.GamePadManager;
 
 public class Main implements GamePadListener {
 
-  static GamePadManager gamePadManager;
-
   public static void main(String[] args) {
     new Main();
     while (true);
   }
 
   public Main() {
-    gamePadManager = new GamePadManager();
+    final GamePadManager gamePadManager = new GamePadManager();
     gamePadManager.start();
     gamePadManager.hookGamePadListener(this);
     System.out.print("\033[2J\033[;H");
@@ -63,6 +61,6 @@ public class Main implements GamePadListener {
 
   @Override
   public void onGamePadError(String error) {
-
+    System.out.println(String.format("An error occured: %s", error));
   }
 }
