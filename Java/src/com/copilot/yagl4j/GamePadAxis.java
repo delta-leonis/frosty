@@ -14,7 +14,9 @@ public enum GamePadAxis {
   SDL_CONTROLLER_AXIS_TRIGGERLEFT(4),
   SDL_CONTROLLER_AXIS_TRIGGERRIGHT(5);
 
-  /// Value of the enumeration.
+  /**
+   * Value of the enumeration.
+   */
   private final int value;
 
   /**
