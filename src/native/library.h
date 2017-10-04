@@ -52,10 +52,11 @@ extern "C" {
 /**
  * @brief Hooks a GamePadListener to the game-pad manager.
  *
- * This method hooks a GamePadListener to the game-pad manager if the game-pad manager is started and if no game-pad
- * listener is hooked yet.
+ * This method hooks a GamePadListener to the game-pad manager if the
+ * game-pad manager is started and if no game-pad listener is hooked yet.
  *
- * @note This method binds to the com.copilot.yagl4j.GamePadManager.hookGamePadListener method.
+ * @note This method binds to the
+ *       com.copilot.yagl4j.GamePadManager.hookGamePadListener method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -63,32 +64,37 @@ extern "C" {
  * @return True if the hook succeed, false if not.
  */
 __attribute__ ((used))
-JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_hookGamePadListener(JNIEnv *jniEnv,
-                                                                                      jobject caller,
-                                                                                      jobject gamePadListener);
+JNIEXPORT jboolean
+JNICALL Java_com_copilot_yagl4j_GamePadManager_hookGamePadListener(
+    JNIEnv *jniEnv, jobject caller, jobject gamePadListener
+);
 
 /**
  * @brief Unhooks the current GamePadListener from the game-pad manager.
  *
- * This method unhooks the current GamePadListener from the game-pad manager if the game-pad manager has a listener
- * hooked.
+ * This method unhooks the current GamePadListener from the game-pad
+ * manager if the game-pad manager has a listener hooked.
  *
- * @note This method binds to the native com.copilot.yagl4j.GamePadManager.ControllerListener method.
+ * @note This method binds to the
+ *       native com.copilot.yagl4j.GamePadManager.ControllerListener method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
  * @return True if the unhook succeed, false if not.
  */
 __attribute__ ((used))
-JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_unhookControllerListener(JNIEnv *jniEnv,
-                                                                                           jobject caller);
+JNIEXPORT jboolean
+JNICALL Java_com_copilot_yagl4j_GamePadManager_unhookControllerListener(
+    JNIEnv *jniEnv, jobject caller
+);
 
 /**
  * @brief Sets the game-pad mapping database.
  *
  * This method sets the game-pad mapping database if the database exists. *
  *
- * @note This method binds to the native com.copilot.yagl4j.GamePadManager.setGamePadMappingDatabase method.
+ * @note This method binds to the native com.
+ *       copilot.yagl4j.GamePadManager.setGamePadMappingDatabase method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -96,30 +102,36 @@ JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_unhookControll
  * @return True if the game-pad mapping database is set successfully, false if not.
  */
 __attribute__ ((used))
-JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_setGamePadMappingDatabase(JNIEnv *jniEnv,
-                                                                                            jobject caller,
-                                                                                            jstring filePath);
+JNIEXPORT jboolean
+JNICALL Java_com_copilot_yagl4j_GamePadManager_setGamePadMappingDatabase(
+    JNIEnv *jniEnv, jobject caller, jstring filePath
+);
 
 /**
  * @brief Start game-pad manager method.
  *
  * This is the start game-pad manager method.
  *
- * @note This method binds to the native com.copilot.yagl4j.GamePadManager.start method.
+ * @note This method binds to the native
+ *       com.copilot.yagl4j.GamePadManager.start method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
  * @return True if the game-pad manager is started successfully, false if not.
  */
 __attribute__ ((used))
-JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_start(JNIEnv *jniEnv, jobject caller);
+JNIEXPORT jboolean
+JNICALL Java_com_copilot_yagl4j_GamePadManager_start(
+    JNIEnv *jniEnv, jobject caller
+);
 
 /**
  * @brief Stop controller manager method.
  *
  * This method stops the controller manager.
  *
- * @note This method binds to the native com.copilot.yagl4j.GamePadManager method.
+ * @note This method binds to the native
+ *       com.copilot.yagl4j.GamePadManager method.
  * @note This method waits for the main thread to stop.
  *
  * @param jniEnv The JNI environment.
@@ -127,7 +139,10 @@ JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_start(JNIEnv *
  * @return True if the thread is successfully stopped, false if not.
  */
 __attribute__ ((used))
-JNIEXPORT jboolean JNICALL Java_com_copilot_yagl4j_GamePadManager_stop(JNIEnv *jniEnv, jobject caller);
+JNIEXPORT jboolean
+JNICALL Java_com_copilot_yagl4j_GamePadManager_stop(
+    JNIEnv *jniEnv, jobject caller
+);
 };
 
 /// Java virtual machine pointer.
