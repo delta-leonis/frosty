@@ -24,8 +24,7 @@ public enum GamePadAxis {
    *
    * @param value The value of the controller axis.
    */
-  GamePadAxis(int value) {
-    // Setting value
+  GamePadAxis(final int value) {
     this.value = value;
   }
 
@@ -36,14 +35,13 @@ public enum GamePadAxis {
    * @return The ControllerAxis.
    * @throws IllegalArgumentException -1 <= value <= 5.
    */
-  public static GamePadAxis fromValue(int value)
-      throws IllegalArgumentException {
-    if (value >= -1 && value <= 5) {
-      return values()[value + 1];
-    } else {
+  public static GamePadAxis fromValue(final int value) {
+    if (value < -1 || value > 5) {
       throw new IllegalArgumentException(
-          String.format("ControllerAxis value %d out of bounds", value));
+          String.format("ControllerAxis value %d out of bounds", value)
+      );
     }
+    return values()[value + 1];
   }
 
   /**
@@ -52,7 +50,6 @@ public enum GamePadAxis {
    * @return The value of the controller axis.
    */
   public int getValue() {
-    // Getting value
     return value;
   }
 }
