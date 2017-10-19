@@ -1,5 +1,5 @@
 /**
- * This file contains the yagl4j library code.
+ * This file contains the frosty library code.
  *
  * @date 2017
  * @author Mark Lefering
@@ -9,7 +9,7 @@
 extern "C" {
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_yagl4j_GamePadManager_hookGamePadListener(
+JNICALL Java_com_copilot_frosty_GamePadManager_hookGamePadListener(
     JNIEnv *jniEnv, jobject caller, jobject gamePadListener
 ) {
   if (_gamePadListener == nullptr && gamePadListener != nullptr) {
@@ -76,7 +76,7 @@ JNICALL Java_com_copilot_yagl4j_GamePadManager_hookGamePadListener(
 __attribute__ ((used))
 JNIEXPORT jboolean
 JNICALL
-Java_com_copilot_yagl4j_GamePadManager_unhookGamePadListener(
+Java_com_copilot_frosty_GamePadManager_unhookGamePadListener(
     JNIEnv *jniEnv, jobject caller
 ) {
   // Checking if a game-pad listener is hooked
@@ -93,7 +93,7 @@ Java_com_copilot_yagl4j_GamePadManager_unhookGamePadListener(
 
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_yagl4j_GamePadManager_setGamePadMappingDatabase(
+JNICALL Java_com_copilot_frosty_GamePadManager_setGamePadMappingDatabase(
     JNIEnv *jniEnv, jobject caller, jstring filePath
 ) {
   jboolean rtn = JNI_FALSE;
@@ -127,7 +127,7 @@ JNICALL Java_com_copilot_yagl4j_GamePadManager_setGamePadMappingDatabase(
 
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_yagl4j_GamePadManager_start(
+JNICALL Java_com_copilot_frosty_GamePadManager_start(
     JNIEnv *jniEnv, jobject caller
 ) {
   // Checking if a thread is already started
@@ -161,7 +161,7 @@ JNICALL Java_com_copilot_yagl4j_GamePadManager_start(
 
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_yagl4j_GamePadManager_stop(
+JNICALL Java_com_copilot_frosty_GamePadManager_stop(
     JNIEnv *jniEnv, jobject caller
 ) {
   // Checking if SDL thread exists

@@ -1,9 +1,4 @@
-package com.copilot.yagl4j.test;
-
-import com.copilot.yagl4j.GamePadAxis;
-import com.copilot.yagl4j.GamePadButton;
-import com.copilot.yagl4j.GamePadListener;
-import com.copilot.yagl4j.GamePadManager;
+package io.leonis.frosty;
 
 public class Main implements GamePadListener {
 

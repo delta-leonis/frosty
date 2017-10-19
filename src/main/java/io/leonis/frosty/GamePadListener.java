@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * This is the game-pad listener interface. This interface is used to listen to

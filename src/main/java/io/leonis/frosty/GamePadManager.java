@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * Game-pad manager class.
@@ -8,7 +8,7 @@ package com.copilot.yagl4j;
 public class GamePadManager {
 
   static {
-    System.loadLibrary("yagl4j");
+    System.loadLibrary("frosty");
   }
 
   /**

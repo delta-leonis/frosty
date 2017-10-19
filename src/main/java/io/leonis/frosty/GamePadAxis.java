@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * Game-pad axis enumeration.

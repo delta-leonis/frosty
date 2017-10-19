@@ -1,4 +1,4 @@
-# yagl4j
+# frosty
 
 ## Description
 Yet Another Gamepad Library 4 Java.
