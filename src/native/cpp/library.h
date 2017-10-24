@@ -56,7 +56,7 @@ extern "C" {
  * game-pad manager is started and if no game-pad listener is hooked yet.
  *
  * @note This method binds to the
- *       com.copilot.frosty.GamePadManager.hookGamePadListener method.
+ *       io.leonis.frosty.GamePadManager.hookGamePadListener method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -65,7 +65,7 @@ extern "C" {
  */
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_frosty_GamePadManager_hookGamePadListener(
+JNICALL Java_io_leonis_frosty_GamePadManager_hookGamePadListener(
     JNIEnv *jniEnv, jobject caller, jobject gamePadListener
 );
 
@@ -76,7 +76,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_hookGamePadListener(
  * manager if the game-pad manager has a listener hooked.
  *
  * @note This method binds to the
- *       native com.copilot.frosty.GamePadManager.ControllerListener method.
+ *       native io.leonis.frosty.GamePadManager.ControllerListener method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -84,7 +84,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_hookGamePadListener(
  */
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_frosty_GamePadManager_unhookControllerListener(
+JNICALL Java_io_leonis_frosty_GamePadManager_unhookControllerListener(
     JNIEnv *jniEnv, jobject caller
 );
 
@@ -94,7 +94,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_unhookControllerListener(
  * This method sets the game-pad mapping database if the database exists. *
  *
  * @note This method binds to the native com.
- *       copilot.frosty.GamePadManager.setGamePadMappingDatabase method.
+ *       io.leonis.frosty.GamePadManager.setGamePadMappingDatabase method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -103,7 +103,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_unhookControllerListener(
  */
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_frosty_GamePadManager_setGamePadMappingDatabase(
+JNICALL Java_io_leonis_frosty_GamePadManager_setGamePadMappingDatabase(
     JNIEnv *jniEnv, jobject caller, jstring filePath
 );
 
@@ -113,7 +113,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_setGamePadMappingDatabase(
  * This is the start game-pad manager method.
  *
  * @note This method binds to the native
- *       com.copilot.frosty.GamePadManager.start method.
+ *       io.leonis.frosty.GamePadManager.start method.
  *
  * @param jniEnv The JNI environment.
  * @param caller The caller of the method.
@@ -121,7 +121,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_setGamePadMappingDatabase(
  */
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_frosty_GamePadManager_start(
+JNICALL Java_io_leonis_frosty_GamePadManager_start(
     JNIEnv *jniEnv, jobject caller
 );
 
@@ -131,7 +131,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_start(
  * This method stops the controller manager.
  *
  * @note This method binds to the native
- *       com.copilot.frosty.GamePadManager method.
+ *       io.leonis.frosty.GamePadManager method.
  * @note This method waits for the main thread to stop.
  *
  * @param jniEnv The JNI environment.
@@ -140,7 +140,7 @@ JNICALL Java_com_copilot_frosty_GamePadManager_start(
  */
 __attribute__ ((used))
 JNIEXPORT jboolean
-JNICALL Java_com_copilot_frosty_GamePadManager_stop(
+JNICALL Java_io_leonis_frosty_GamePadManager_stop(
     JNIEnv *jniEnv, jobject caller
 );
 };
