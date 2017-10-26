@@ -32,9 +32,8 @@ make
 cd -
 javac -d ./build src/*/java/io/leonis/frosty/*.java
 cd build
-jar -cvfe frosty.jar io/leonis/frosty/Main io/leonis/frosty/*
-cd -
-java -Djava.library.path=build -jar build/frosty.jar
+jar -cvfe frosty.jar io/leonis/frosty/Main ./**
+java -jar build/frosty.jar
 ```
 
 ## Contributors
