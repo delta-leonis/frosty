@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(yagl4j)
+project(frosty)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -12,10 +12,10 @@ PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
 set(SOURCE_FILES library.cpp library.h)
 set(CMAKE_CXX_FLAGS ${SDL_CFLAGS} -pthread)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../build)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../build)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../build)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../build)
 
 include_directories(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS} ${JNI_INCLUDE_DIRS})
 link_libraries(${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${JNI_LIBRARIES})
 
-add_library(yagl4j SHARED ${SOURCE_FILES})
+add_library(frosty SHARED ${SOURCE_FILES})

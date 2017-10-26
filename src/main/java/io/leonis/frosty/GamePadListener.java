@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * This is the game-pad listener interface. This interface is used to listen to
@@ -14,7 +14,7 @@ public interface GamePadListener {
    *
    * @param gamePadID The game-pad ID.
    */
-  void onGamePadAdded(long gamePadID);
+  void onGamePadAdded(final long gamePadID);
 
   /**
    * This the controller removed callback. This callback is called whenever a
@@ -22,7 +22,7 @@ public interface GamePadListener {
    *
    * @param gamePadID The game-pad ID.
    */
-  void onGamePadRemoved(long gamePadID);
+  void onGamePadRemoved(final long gamePadID);
 
   /**
    * This is the controller axis motion callback. This callback is called
@@ -32,7 +32,9 @@ public interface GamePadListener {
    * @param axis The axis of the motion.
    * @param value The value of the axis.
    */
-  void onGamePadAxisMotion(long gamePadID, byte axis, short value);
+  void onGamePadAxisMotion(
+      final long gamePadID, final byte axis, final short value
+  );
 
   /**
    * This is the controller button down callback. This callback is called
@@ -41,7 +43,7 @@ public interface GamePadListener {
    * @param gamePadID The game-pad ID.
    * @param button The button that has been pressed.
    */
-  void onGamePadButtonDown(long gamePadID, byte button);
+  void onGamePadButtonDown(final long gamePadID, final byte button);
 
   /**
    * This is the controller button up callback. This callback is called whenever
@@ -50,7 +52,7 @@ public interface GamePadListener {
    * @param gamePadID The game-pad ID.
    * @param button The button that has been released.
    */
-  void onGamePadButtonUp(long gamePadID, byte button);
+  void onGamePadButtonUp(final long gamePadID, final byte button);
 
   /**
    * This is the controller remapped callback. This callback is called whenever
@@ -58,7 +60,7 @@ public interface GamePadListener {
    *
    * @param gamePadID The game-pad ID.
    */
-  void onGamePadRemapped(long gamePadID);
+  void onGamePadRemapped(final long gamePadID);
 
   /**
    * This is the error callback. This callback is called whenever a error has
@@ -66,5 +68,5 @@ public interface GamePadListener {
    *
    * @param error The error that occurred.
    */
-  void onGamePadError(String error);
+  void onGamePadError(final String error);
 }

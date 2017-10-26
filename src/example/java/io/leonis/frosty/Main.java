@@ -1,13 +1,8 @@
-package com.copilot.yagl4j.test;
-
-import com.copilot.yagl4j.GamePadAxis;
-import com.copilot.yagl4j.GamePadButton;
-import com.copilot.yagl4j.GamePadListener;
-import com.copilot.yagl4j.GamePadManager;
+package io.leonis.frosty;
 
 public class Main implements GamePadListener {
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     new Main();
     while (true);
   }
@@ -20,17 +15,19 @@ public class Main implements GamePadListener {
   }
 
   @Override
-  public void onGamePadAdded(long gamePadID) {
+  public void onGamePadAdded(final long gamePadID) {
     System.out.println(String.format("Controller %d added", gamePadID));
   }
 
   @Override
-  public void onGamePadRemoved(long gamePadID) {
+  public void onGamePadRemoved(final long gamePadID) {
     System.out.println(String.format("Controller %d removed", gamePadID));
   }
 
   @Override
-  public void onGamePadAxisMotion(long gamePadID, byte axis, short value) {
+  public void onGamePadAxisMotion(
+      final long gamePadID, final byte axis, final short value
+  ) {
     System.out.print(String.format(
         "%c[%d;0f Controller %d moved axis %s: %d    ", 0x1B, axis + 1,
         gamePadID, GamePadAxis.fromValue(axis), value
@@ -39,7 +36,7 @@ public class Main implements GamePadListener {
   }
 
   @Override
-  public void onGamePadButtonDown(long gamePadID, byte button) {
+  public void onGamePadButtonDown(final long gamePadID, final byte button) {
     System.out.println(String.format(
         "%c[%d;0f Controller %d %s: [x]", 0x1B, 7 + button, gamePadID,
         GamePadButton.fromValue(button)
@@ -47,7 +44,7 @@ public class Main implements GamePadListener {
   }
 
   @Override
-  public void onGamePadButtonUp(long gamePadID, byte button) {
+  public void onGamePadButtonUp(final long gamePadID, final byte button) {
     System.out.println(String.format(
         "%c[%d;0f Controller %d %s: [ ]", 0x1B, 7 + button, gamePadID,
         GamePadButton.fromValue(button)
@@ -55,12 +52,12 @@ public class Main implements GamePadListener {
   }
 
   @Override
-  public void onGamePadRemapped(long gamePadID) {
+  public void onGamePadRemapped(final long gamePadID) {
     System.out.println(String.format("Controller %d remapped", gamePadID));
   }
 
   @Override
-  public void onGamePadError(String error) {
+  public void onGamePadError(final String error) {
     System.out.println(String.format("An error occured: %s", error));
   }
 }

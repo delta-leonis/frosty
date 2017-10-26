@@ -1,10 +1,7 @@
-# yagl4j
+# frosty
 
 ## Description
-Yet Another Gamepad Library 4 Java.
-
-## Motivation
-There is no reactive game-pad library for Java.
+Yet another gamepad library for Java, based on SDL.
 
 ## Installation
 The following packages are required:
@@ -14,6 +11,4 @@ The following packages are required:
 
 ## Contributors
 - Mark Lefering
-
-## License
-TODO
+- Ryan Meulenkamp

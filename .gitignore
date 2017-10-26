@@ -1,5 +1,13 @@
 cmake-build-debug/
 build/
+CMakeFiles/
 out/
 .idea/
 *.iml
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+.gradle/
+gradle/
+gradlew
+gradlew.bat

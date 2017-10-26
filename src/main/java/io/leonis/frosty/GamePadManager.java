@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * Game-pad manager class.
@@ -8,8 +8,7 @@ package com.copilot.yagl4j;
 public class GamePadManager {
 
   static {
-    // Load yagl4j
-    System.loadLibrary("yagl4j");
+    System.loadLibrary("frosty");
   }
 
   /**
@@ -19,7 +18,8 @@ public class GamePadManager {
    * @return True if the listener is hooked, false if not.
    */
   public final native boolean hookGamePadListener(
-      GamePadListener gamePadListener);
+      final GamePadListener gamePadListener
+  );
 
   /**
    * Unhooks a GamePadListener from the GamePadManager.
@@ -50,5 +50,5 @@ public class GamePadManager {
    * @param filePath The path to the database file.
    * @return True if the database is loaded, false if not.
    */
-  public final native boolean setGamePadMappingDatabase(String filePath);
+  public final native boolean setGamePadMappingDatabase(final String filePath);
 }

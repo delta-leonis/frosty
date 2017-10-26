@@ -1,4 +1,4 @@
-package com.copilot.yagl4j;
+package io.leonis.frosty;
 
 /**
  * Game-pad button enumeration.
@@ -26,23 +26,17 @@ public enum GamePadButton {
   private final int value;
 
   /**
-   * Controller button enum constructor.
-   *
    * @param value The value of the controller button
    */
-  GamePadButton(int value) {
-    // Setting value
+  GamePadButton(final int value) {
     this.value = value;
   }
 
   /**
-   * Gets the enum from a integer value.
-   *
-   * @param value The value to get the enum for.
-   * @return The enum.
-   * @throws IllegalArgumentException -1 <= value <= 14
+   * @param value The value to get the enum for
+   * @return The enum value
    */
-  public static GamePadButton fromValue(int value) {
+  public static GamePadButton fromValue(final int value) {
     if (value >= -1 && value <= 14) {
       return values()[value + 1];
     } else {
@@ -53,8 +47,6 @@ public enum GamePadButton {
   }
 
   /**
-   * Gets the value of the enum.
-   *
    * @return The value.
    */
   public int getValue() {
