@@ -1,4 +1,4 @@
-# `frosty`
+# frosty
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a141c62a0d074580a10974a5ece29348)](https://www.codacy.com/app/delta-leonis/frosty?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=delta-leonis/yagl4j&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/delta-leonis/algieba.svg?style=svg)](https://circleci.com/gh/delta-leonis/algieba)
 
@@ -8,7 +8,7 @@ to run `frosty`.
 
 ## Documentation
 
-The javadoc for the current code on `master` can be found on https://delta-leonis.github.io/frosty/
+The javadoc for the current code on `master` can be found [here](https://delta-leonis.github.io/frosty/)
 
 ## Setup
 
