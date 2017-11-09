@@ -11,7 +11,7 @@
 #include <sstream>
 #include <map>
 #include <jni.h>
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 /// Game-pad added callback method name.
 #define ADDED_METHOD_NAME "onGamePadAdded"
