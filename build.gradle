@@ -19,7 +19,6 @@ model {
                 //redirectOutput = false
 
                 cmakeRoot '.'
-                targets 'all'
 
                 inputs.dir 'src'
                 inputs.file 'CMakeLists.txt'
