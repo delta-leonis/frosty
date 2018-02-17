@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import org.reactivestreams.Publisher;
 
 /**
- * The Class ControllerDeducer.
+ * The Class ControllerTransformer.
  *
  * Transforms a {@link Set} of {@link Controller Controllers} to {@code O} to a {@link Map} grouped
  * by it's applicable identity.
